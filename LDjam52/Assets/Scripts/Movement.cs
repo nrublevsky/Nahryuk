@@ -53,7 +53,7 @@ public class Movement : MonoBehaviour
             inAir = false;
             movSpeed= 100f;
         }
-        if (collision.collider.CompareTag("Box"))
+        if (collision.collider.CompareTag("Box") || collision.collider.CompareTag("SideBoxCollider") || collision.collider.CompareTag("InsideBoxCollider"))
         {
             inAir = false;
             movSpeed = 100f;

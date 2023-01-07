@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5113352143267131922}
   - component: {fileID: 6359551924182079949}
   - component: {fileID: 5122175811732154967}
+  - component: {fileID: -3747819131765288121}
   m_Layer: 0
   m_Name: Raddish
   m_TagString: Untagged
@@ -66,6 +67,18 @@ CapsuleCollider:
   m_Height: 0.56
   m_Direction: 1
   m_Center: {x: 0, y: 0.19, z: 0}
+--- !u!114 &-3747819131765288121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2446178409282877379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc56eab1f7b2f24cad503eb90669c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &947094314079257469
 PrefabInstance:
   m_ObjectHideFlags: 0
