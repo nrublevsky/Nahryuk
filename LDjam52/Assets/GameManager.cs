@@ -29,9 +29,9 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator SpawnVegetable()
     {
-        yield return new WaitForSeconds(spawnRate);
+        
         spawnRate = Random.Range(1, 2);
-
+        yield return new WaitForSecondsRealtime(spawnRate);
         Instantiate(spwnblVeges[Random.Range(0, spwnblVeges.Count - 1)], spawnPositions[Random.Range(0, spawnPositions.Count-1)],this.transform.rotation);
         
         
