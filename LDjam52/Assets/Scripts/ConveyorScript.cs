@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,12 +11,12 @@ public class ConveyorScript : MonoBehaviour
     int current = 0;
     float rotspeed;
     public float speed;
-    float WPradius = 2;
+    float WPradius = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -33,10 +34,15 @@ public class ConveyorScript : MonoBehaviour
             }
         
         }
-        transform.position= Vector3.MoveTowards(transform.position, waypoints[current].transform.position,Time.deltaTime * speed);
+        InvokeRepeating("MovingConveyor", 8, 6);
+
     }
 
    
+    void MovingConveyor()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, waypoints[current].transform.position, Time.deltaTime * speed);
 
+    }
 
 }
