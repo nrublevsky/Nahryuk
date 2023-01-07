@@ -7,8 +7,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     List<GameObject> spwnblVeges;
+    
+    public List<Vector3> spawnPositions;
 
-    List<Vector3> spawnPositions;
     // Start is called before the first frame update
     void Start()
     {
