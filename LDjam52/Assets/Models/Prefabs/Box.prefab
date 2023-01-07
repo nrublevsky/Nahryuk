@@ -399,8 +399,9 @@ GameObject:
   - component: {fileID: 906963855815476182}
   - component: {fileID: 6648358049130022056}
   - component: {fileID: 467736494786959914}
+  - component: {fileID: -1161330416570298759}
   m_Layer: 0
-  m_Name: BoxDaikon
+  m_Name: Box
   m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -455,6 +456,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.92433673, y: 0.08097559, z: 1}
   m_Center: {x: 0.0008099377, y: 0.18707332, z: 0}
+--- !u!114 &-1161330416570298759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2397817634486273348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2c58b1a047fe74bb6ec004cc45c98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3558617746429015580
 GameObject:
   m_ObjectHideFlags: 0

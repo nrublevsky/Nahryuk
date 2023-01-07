@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 2446178409282877379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.053, y: 1.053, z: 1.053}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.49, y: 0.49, z: 0.49}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2527359990819169783}
   - {fileID: 948759999884844637}
@@ -79,6 +79,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc56eab1f7b2f24cad503eb90669c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
+  vegName: Redisochka
 --- !u!1001 &947094314079257469
 PrefabInstance:
   m_ObjectHideFlags: 0

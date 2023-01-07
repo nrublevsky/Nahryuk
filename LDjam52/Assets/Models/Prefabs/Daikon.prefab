@@ -77,6 +77,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc56eab1f7b2f24cad503eb90669c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
+  vegName: "\u0414\u0430\u0439\u043A\u043E\u043D\u0447\u0456\u043A"
 --- !u!1001 &459048575258247174
 PrefabInstance:
   m_ObjectHideFlags: 0

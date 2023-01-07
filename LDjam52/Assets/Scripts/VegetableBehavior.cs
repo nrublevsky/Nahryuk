@@ -6,7 +6,7 @@ public class VegetableBehavior : MonoBehaviour
 {
     
     public GameManager gm;
-    
+    public string vegName;
 
 
     // Start is called before the first frame update
@@ -32,7 +32,7 @@ public class VegetableBehavior : MonoBehaviour
         {
            
             Destroy(gameObject);
-            gm.AddToBox();
+            gm.AddToBox(vegName);
         }
     }
 }

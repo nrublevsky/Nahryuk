@@ -43,16 +43,16 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(spawnRate);*/
         if (gameRunning)
         {         
-            Instantiate(spwnblVeges[Random.Range(0, spwnblVeges.Count - 1)], spawnPositions[Random.Range(0, spawnPositions.Count - 1)], this.transform.rotation);
+            Instantiate(spwnblVeges[Random.Range(0, spwnblVeges.Count)], spawnPositions[Random.Range(0, spawnPositions.Count)], this.transform.rotation);
         }
         yield return null;
         
         
     }
 
-    public void AddToBox()
+    public void AddToBox(string name)
     {
-        Debug.Log("Added to Box");
+        Debug.Log("Added " + name + " to Box");
     }
 
     

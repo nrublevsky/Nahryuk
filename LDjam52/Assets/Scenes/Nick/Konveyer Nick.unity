@@ -459,11 +459,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spwnblVeges:
   - {fileID: 4458322441206303422, guid: ab49d6d6b575e9d4282afe00149cd991, type: 3}
+  - {fileID: 2446178409282877379, guid: 8be9b2d8922dee540ab6f3b948c0840a, type: 3}
   spawnPositions:
   - {x: -3, y: 2.5, z: -6.66}
   - {x: -1, y: 2.5, z: -6.66}
   - {x: 1, y: 2.5, z: -6.66}
-  - {x: 3, y: 2.5, z: -6.66}
+  - {x: 2.5, y: 2.5, z: -6.66}
   randomPosition: {fileID: 0}
   delay: 1
   spawnRate: 0.5
