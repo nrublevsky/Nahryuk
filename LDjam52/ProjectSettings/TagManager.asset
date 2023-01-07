@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - BottomCollider
+  - LeftCollider
+  - RightCollider
+  - Floor
+  - LeftWall
+  - RightWall
+  - Box
+  - PickUpZone
+  - InsideBoxCollider
+  - SideBoxCollider
   layers:
   - Default
   - TransparentFX
