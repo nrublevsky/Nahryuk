@@ -42,8 +42,9 @@ public class GameManager : MonoBehaviour
         /*spawnRate = Random.Range(2,3);
         yield return new WaitForSecondsRealtime(spawnRate);*/
         if (gameRunning)
-        {         
-            Instantiate(spwnblVeges[Random.Range(0, spwnblVeges.Count)], spawnPositions[Random.Range(0, spawnPositions.Count)], this.transform.rotation);
+        {
+            Quaternion randRot = Quaternion.Euler(Random.Range(0, 180), Random.Range(0, 180), Random.Range(0, 180));
+            Instantiate(spwnblVeges[Random.Range(0, spwnblVeges.Count)], spawnPositions[Random.Range(0, spawnPositions.Count)], randRot);
         }
         yield return null;
         

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1564526237834956514}
   - component: {fileID: 1694699001652573887}
   - component: {fileID: 9053934528933577075}
+  - component: {fileID: 5188523330733307692}
   m_Layer: 0
   m_Name: BeltUP
   m_TagString: Untagged
@@ -91,12 +92,25 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21755947450611248}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9fdc6a00ba4a5ba4a8235149597fc2a7, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.760156, z: 1}
+  m_Center: {x: 0, y: 0.38007814, z: 0}
+--- !u!114 &5188523330733307692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21755947450611248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef11e2be47d32a448a6a83661fcf871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushForce: 17.5
 --- !u!1 &210328304917988841
 GameObject:
   m_ObjectHideFlags: 0
