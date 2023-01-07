@@ -313,7 +313,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spwnblVeges:
   - {fileID: 4458322441206303422, guid: ab49d6d6b575e9d4282afe00149cd991, type: 3}
-  spawnPositions: []
+  spawnPositions:
+  - {x: -3, y: 2.5, z: -6.66}
+  - {x: -1, y: 2.5, z: -6.66}
+  - {x: 1, y: 2.5, z: -6.66}
+  - {x: 3, y: 2.5, z: -6.66}
 --- !u!1 &1056500666
 GameObject:
   m_ObjectHideFlags: 0
