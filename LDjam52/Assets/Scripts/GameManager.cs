@@ -16,20 +16,24 @@ public class GameManager : MonoBehaviour
     public float delay = 1f;
     public float spawnRate;
 
+    public GameObject blocker;
+    public bool blocking;
+
     bool gameRunning = true;
 
     // Start is called before the first frame update
     void Start()
     {
         spawnRate = Random.Range(2, 3);
-
+        blocker = GameObject.Find("Blocker").gameObject;
         InvokeRepeating("SpawnVegetable", delay,spawnRate);
+        InvokeRepeating("BlockerController", delay, spawnRate);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        BlockerController();
     }
 
     public void SpawnVegetable()
@@ -50,7 +54,27 @@ public class GameManager : MonoBehaviour
         
         
     }
+    public void BlockerController() {
 
+        blocker.GetComponent<BlockerBehavior>().SetBlockingOff();
+
+        if (blocking)
+        {
+            SetBlockingSwitcher();
+        }
+        else 
+        {
+            blocker.GetComponent<BlockerBehavior>().SetBlockingOff();
+        }
+    
+    }
+
+    public IEnumerator SetBlockingSwitcher()
+    {
+        yield return new WaitForSecondsRealtime(3);
+        blocker.GetComponent<BlockerBehavior>().SetBlockingOn();
+    }
+    
     public void AddToBox(string name)
     {
         Debug.Log("Added " + name + " to Box");
