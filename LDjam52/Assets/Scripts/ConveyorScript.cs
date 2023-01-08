@@ -34,7 +34,7 @@ public class ConveyorScript : MonoBehaviour
             }
         
         }
-        InvokeRepeating("MovingConveyor", 8, 6);
+        transform.position = Vector3.MoveTowards(transform.position, waypoints[current].transform.position, Time.deltaTime * speed);
 
     }
 
