@@ -49,12 +49,12 @@ public class GameManager : MonoBehaviour
     {
         if (vegetableSpawned > 5)
         {
-            StartCoroutine(Spawn());
+            StartCoroutine(Spawn(spwnblVeges,spwnblKakas));
         }
         
     }
 
-    public IEnumerator Spawn()
+    public IEnumerator Spawn(List<GameObject> veges,List<GameObject> kakas)
     {
         
         
