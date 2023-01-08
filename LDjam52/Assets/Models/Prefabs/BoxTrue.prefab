@@ -162,8 +162,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.92433673, y: 0.08097559, z: 1}
-  m_Center: {x: 0.0008099377, y: 0.18707332, z: 0}
+  m_Size: {x: 0.89296985, y: 0.5908867, z: 1}
+  m_Center: {x: -0.014873624, y: 0.2749266, z: 0}
 --- !u!114 &-1161330416570298759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,6 +457,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8234668773751621391, guid: ed4618793948b8f4193b3b8f57bb514b, type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: -8199005351108037487, guid: ed4618793948b8f4193b3b8f57bb514b, type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
     - target: {fileID: -5604543492910536218, guid: ed4618793948b8f4193b3b8f57bb514b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -465,9 +473,25 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e9169c47a238aaf4e82b61f4a3fbffe8, type: 2}
+    - target: {fileID: -3585074104290703007, guid: ed4618793948b8f4193b3b8f57bb514b, type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: -3111565609762313623, guid: ed4618793948b8f4193b3b8f57bb514b, type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ed4618793948b8f4193b3b8f57bb514b, type: 3}
       propertyPath: m_Name
       value: Cart
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ed4618793948b8f4193b3b8f57bb514b, type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 9137591913491534708, guid: ed4618793948b8f4193b3b8f57bb514b, type: 3}
+      propertyPath: m_TagString
+      value: Box
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed4618793948b8f4193b3b8f57bb514b, type: 3}
