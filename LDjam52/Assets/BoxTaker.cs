@@ -20,10 +20,10 @@ public class BoxTaker : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Box"))
         {
             Debug.Log("pulling");
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.forward * pullForce,ForceMode.Force);
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.right * pullForce,ForceMode.Force);
         }
         
     }
@@ -32,7 +32,7 @@ public class BoxTaker : MonoBehaviour
         if (collision.collider.CompareTag("Box"))
         {
             Debug.Log("pulling");
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.forward * pullForce, ForceMode.Force);
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.right * pullForce, ForceMode.Force);
         }
     }
 }
