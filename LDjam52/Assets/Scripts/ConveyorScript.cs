@@ -41,6 +41,7 @@ public class ConveyorScript : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, waypoints[current].transform.position, Time.deltaTime * speed);
 
         }
+<<<<<<< HEAD
 
 
 
@@ -80,6 +81,9 @@ public class ConveyorScript : MonoBehaviour
 
         //  }
         //  transform.position = Vector3.MoveTowards(transform.position, waypoints[current].transform.position, Time.deltaTime * speed);
+=======
+        InvokeRepeating("MovingConveyor", 8, 6);
+>>>>>>> parent of bc4a7fa (Main Meny Added)
 
     }
 

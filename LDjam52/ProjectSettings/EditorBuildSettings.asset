@@ -4,11 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Slava/Konveyer Slava.unity
-    guid: 9461a6a1e118a584c84c3f14cb5e3548
-  - enabled: 1
-    path: Assets/Menu.unity
-    guid: 0cbdbb6bd19da35469dd2435448ca19b
+  m_Scenes: []
   m_configObjects: {}
