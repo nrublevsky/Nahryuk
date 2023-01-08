@@ -20,12 +20,14 @@ public class BoxDestroyer : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Box"))
+        if (collision.collider.gameObject.CompareTag("Box"))
         {
             Debug.Log("touched and destroyed");
-            Destroy(gameObject);
+            Destroy(collision.gameObject);
             SetOneSuccess();
         }
+            
+       
     }
 
     public void SetOneSuccess() {
