@@ -21,11 +21,11 @@ public class ForceSlide : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        Debug.Log("touching");
+        
         collision.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.right * pushForce, ForceMode.Force);
     }private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("touching");
+       
         collision.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.right * pushForce, ForceMode.Force);
     }
 }

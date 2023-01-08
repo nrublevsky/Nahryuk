@@ -10,65 +10,91 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     List<GameObject> spwnblVeges;
-    
+    [SerializeField]
+    List<GameObject> spwnblKakas;
+
     public List<Vector3> spawnPositions;
 
     public Transform randomPosition;
     public float delay = 1f;
     public float spawnRate;
 
-    public List<GameObject> blockers;
+    public int vegetableSpawned;
+
+    public GameObject blockerL;
+    public GameObject blockerR;
     private BlockerBehavior blBehavior;
     public bool blocking;
 
     bool gameRunning = true;
 
+    public int reqBoxes;
+    public int actualBoxes;
+
     // Start is called before the first frame update
     void Start()
     {
-        spawnRate = Random.Range(2, 3);              
-        InvokeRepeating(nameof(SpawnVegetable), delay,spawnRate);
-        InvokeRepeating(nameof(BlockerSwitcher), delay, spawnRate) ;
+        spawnRate = Random.Range(2, 3);
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void SpawnVegetable()
+    public void Spawn5Vegetables()
     {
-            StartCoroutine(Spawn());      
+        if (vegetableSpawned > 5)
+        {
+            StartCoroutine(Spawn());
+        }
+        
     }
 
     public IEnumerator Spawn()
     {
-        /*spawnRate = Random.Range(2,3);
-        yield return new WaitForSecondsRealtime(spawnRate);*/
+        
+        
         if (gameRunning)
         {
+            spawnRate = Random.Range(2, 4);
+            int random = Random.Range(1, 5);
+
             Quaternion randRot = Quaternion.Euler(Random.Range(0, 180), Random.Range(0, 180), Random.Range(0, 180));
-            Instantiate(spwnblVeges[Random.Range(0, spwnblVeges.Count)], spawnPositions[Random.Range(0, spawnPositions.Count)], randRot);
+
+            if (random > 3)
+            {
+                Instantiate(spwnblVeges[Random.Range(0, spwnblVeges.Count)], spawnPositions[Random.Range(0, spawnPositions.Count)], randRot);
+                vegetableSpawned++;
+            }
+            else
+            {
+                Instantiate(spwnblKakas[Random.Range(0, spwnblKakas.Count)], spawnPositions[Random.Range(0, spawnPositions.Count)], randRot);
+            }
         }
-        yield return null;   
+        yield return new WaitForSeconds(spawnRate);
+        yield return null;
     }
 
-    public void BlockerSwitcher()
-    {
-        StartCoroutine(SwitchBlocker());
-        
-    }
 
-    public IEnumerator SwitchBlocker()
-    {
-        for (int i = 0; i < blockers.Count; i++)
-        {
-            GameObject blockerItem = blockers[i].GameObject();
-            blBehavior = blockerItem.GetComponent<BlockerBehavior>();
+
+    public IEnumerator SwitchBlocker(GameObject blocker)
+    {    
+            blBehavior = blocker.GetComponent<BlockerBehavior>();
             blBehavior.SetBlocking();
             blocking = blBehavior.blocking;
-        }       
+               
         yield return null;
+    }
+
+    public void ControlGame() {
+
+        if (actualBoxes == reqBoxes)
+        {
+            gameRunning = false;
+        }
     }
 }
