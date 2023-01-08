@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
     public float delay = 1f;
     public float spawnRate;
 
-    public GameObject blocker;
+    public List<GameObject> blockers;
     private BlockerBehavior blBehavior;
     public bool blocking;
 
@@ -25,11 +26,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnRate = Random.Range(2, 3);
-        blocker = GameObject.Find("Blocker").gameObject;
-        blBehavior = blocker.GetComponent<BlockerBehavior>();
-        blocking = blBehavior.blocking;
-
+        spawnRate = Random.Range(2, 3);              
         InvokeRepeating(nameof(SpawnVegetable), delay,spawnRate);
         InvokeRepeating(nameof(BlockerSwitcher), delay, spawnRate) ;
     }
@@ -65,9 +62,13 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator SwitchBlocker()
     {
-        blBehavior.SetBlocking();
-        blocking = blBehavior.blocking;
-        
+        for (int i = 0; i < blockers.Count; i++)
+        {
+            GameObject blockerItem = blockers[i].GameObject();
+            blBehavior = blockerItem.GetComponent<BlockerBehavior>();
+            blBehavior.SetBlocking();
+            blocking = blBehavior.blocking;
+        }       
         yield return null;
     }
 }

@@ -5,10 +5,12 @@ using UnityEngine;
 public class ForceSlide : MonoBehaviour
 {
     public float pushForce;
+    public Vector3 localRight;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame
@@ -20,6 +22,10 @@ public class ForceSlide : MonoBehaviour
     private void OnCollisionStay(Collision collision)
     {
         Debug.Log("touching");
-        collision.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.back * pushForce, ForceMode.Force);
+        collision.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.right * pushForce, ForceMode.Force);
+    }private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("touching");
+        collision.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.right * pushForce, ForceMode.Force);
     }
 }

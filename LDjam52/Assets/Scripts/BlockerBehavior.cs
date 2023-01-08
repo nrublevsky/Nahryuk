@@ -37,13 +37,13 @@ public class BlockerBehavior : MonoBehaviour
         {
             targPosition.y = swichedOnY;
             currPosition = transform.position;
-            transform.Translate(Vector3.MoveTowards(currPosition, targPosition,0.01f));
+            transform.position = targPosition;
         }
         else
         {
             targPosition.y = swichedOffY;
             currPosition = transform.position;
-            transform.Translate(Vector3.MoveTowards(currPosition, targPosition, 0.01f) * movSpeed * Time.deltaTime);
+            transform.position = targPosition;
         }
     }
 }

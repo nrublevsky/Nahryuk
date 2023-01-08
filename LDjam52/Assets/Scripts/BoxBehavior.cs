@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class BoxBehavior : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class BoxBehavior : MonoBehaviour
 
     public bool boxFull;
     public string boxName;
+
+    public float pushForce;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +26,7 @@ public class BoxBehavior : MonoBehaviour
 
     }
 
-    void AddCorrect()
+    public void AddCorrect()
     {
       innerCounter++;
     }
@@ -45,5 +48,19 @@ public class BoxBehavior : MonoBehaviour
     {
         // активувати обњект з коллайдером повноти
         
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Daikon"))
+        {
+            Debug.Log("Added daikon");
+            AddCorrect();
+        }
+        if (collision.collider.CompareTag("Raddish"))
+        {
+            Debug.Log("Not Daikon");
+            collision.rigidbody.AddForce(new Vector3(0, Random.Range(60f, 120f), 0) * pushForce, ForceMode.Impulse);
+        }
     }
 }

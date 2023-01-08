@@ -5,7 +5,7 @@ using UnityEngine;
 public class RollerRotate : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public Vector3 rotationDirection;
     [SerializeField]
     float rotationAngle;
 
@@ -15,8 +15,9 @@ public class RollerRotate : MonoBehaviour
     }
 
     // Update is called once per frame
+  
     void Update()
     {
-        transform.Rotate(Vector3.down, rotationAngle) ;
+        transform.Rotate(Vector3.up, Space.World) ;
     }
 }
