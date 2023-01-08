@@ -16,29 +16,29 @@ public class ConveyorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(waypoints[current].transform.position, transform.position) < WPradius)
-
+        if (Vector3.Distance(waypoints[current].transform.position,transform.position) < WPradius) 
+        
         {
             current++;
-            if (current >= waypoints.Length)
-
+            if(current>=waypoints.Length) 
+            
             {
-                current = 0;
-
+                current = 0; 
+            
             }
-
+        
         }
         transform.position = Vector3.MoveTowards(transform.position, waypoints[current].transform.position, Time.deltaTime * speed);
 
     }
 
-
+   
     void MovingConveyor()
     {
         transform.position = Vector3.MoveTowards(transform.position, waypoints[current].transform.position, Time.deltaTime * speed);
