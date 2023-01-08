@@ -49,12 +49,12 @@ public class GameManager : MonoBehaviour
     {
         if (vegetableSpawned > 5)
         {
-            StartCoroutine(Spawn(spwnblVeges,spwnblKakas));
+            StartCoroutine(Spawn(spwnblVeges,spwnblKakas, spawnPositions));
         }
         
     }
 
-    public IEnumerator Spawn(List<GameObject> veges,List<GameObject> kakas)
+    public IEnumerator Spawn(List<GameObject> veges,List<GameObject> kakas, List<Vector3> spawnPositions)
     {
         
         
@@ -67,12 +67,12 @@ public class GameManager : MonoBehaviour
 
             if (random > 3)
             {
-                Instantiate(spwnblVeges[Random.Range(0, spwnblVeges.Count)], spawnPositions[Random.Range(0, spawnPositions.Count)], randRot);
+                Instantiate(spwnblVeges[Random.Range(0, veges.Count)], spawnPositions[Random.Range(0, spawnPositions.Count)], randRot);
                 vegetableSpawned++;
             }
             else
             {
-                Instantiate(spwnblKakas[Random.Range(0, spwnblKakas.Count)], spawnPositions[Random.Range(0, spawnPositions.Count)], randRot);
+                Instantiate(spwnblKakas[Random.Range(0, kakas.Count)], spawnPositions[Random.Range(0, spawnPositions.Count)], randRot);
             }
         }
         yield return new WaitForSeconds(spawnRate);
