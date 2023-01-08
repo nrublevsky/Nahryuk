@@ -1,15 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class BlockerBehavior : MonoBehaviour
 {
     public GameObject blocker;
-    
+    public float swichedOnY;
+    public float swichedOffY;
+
+    public float movSpeed;
+
+    private Vector3 currPosition;
+
+    public bool blocking = true;
     // Start is called before the first frame update
     void Start()
     {
-        
+           
     }
 
     // Update is called once per frame
@@ -18,12 +27,23 @@ public class BlockerBehavior : MonoBehaviour
         
     }
 
-    public void SetBlockingOn()
+    public void SetBlocking()
     {
-        GameObject.Find("Blocker").gameObject.transform.position = new Vector3(2.956f, -0.35f, -6.88f);
-    }
-    public void SetBlockingOff()
-    {
-        GameObject.Find("Blocker").gameObject.transform.position = new Vector3(2.956f, -0.7f, -6.88f);
+        
+        blocking = !blocking;
+        
+        Vector3 targPosition = blocker.transform.position;
+        if (blocking)
+        {
+            targPosition.y = swichedOnY;
+            currPosition = transform.position;
+            transform.Translate(Vector3.MoveTowards(currPosition, targPosition,0.01f));
+        }
+        else
+        {
+            targPosition.y = swichedOffY;
+            currPosition = transform.position;
+            transform.Translate(Vector3.MoveTowards(currPosition, targPosition, 0.01f) * movSpeed * Time.deltaTime);
+        }
     }
 }

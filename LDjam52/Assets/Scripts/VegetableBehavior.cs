@@ -32,7 +32,7 @@ public class VegetableBehavior : MonoBehaviour
         {
            
             Destroy(gameObject);
-            gm.AddToBox(vegName);
+            
         }
     }
 }
