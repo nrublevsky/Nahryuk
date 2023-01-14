@@ -28,11 +28,17 @@ public class VegetableBehavior : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (collision.collider.CompareTag("InsideBoxCollider"))
+        
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        
+        if (collision.CompareTag("InsideBoxCollider"))
         {
-           
+
             Destroy(gameObject);
-            
+
         }
     }
 }

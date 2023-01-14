@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 2397817634486273348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.46000004, y: 0.63286805, z: 0.46000004}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4072845080051160718}
   - {fileID: 8487567626466152483}
@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 5786567315026798897}
   - component: {fileID: 985350842885185811}
   - component: {fileID: 2199363007822667564}
+  - component: {fileID: 8637856307363922596}
   m_Layer: 0
   m_Name: InsideBoxCollider
   m_TagString: InsideBoxCollider
@@ -110,7 +111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4723564870354679770}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.299, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1739, z: 0}
   m_LocalScale: {x: 0.9, y: 0.07, z: 0.87}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -175,7 +176,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4723564870354679770}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 2.0349631, z: 1}
@@ -194,6 +195,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   box: {fileID: 2397817634486273348}
   boxBehavior: {fileID: -1161330416570298759}
+--- !u!54 &8637856307363922596
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4723564870354679770}
+  serializedVersion: 2
+  m_Mass: 0.0001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &8233526476090357704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -331,7 +348,7 @@ SphereCollider:
   m_GameObject: {fileID: 8967815462264898393}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.85
   m_Center: {x: 0.0021881962, y: 1.43, z: 0.15108156}
