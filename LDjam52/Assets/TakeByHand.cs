@@ -11,12 +11,12 @@ public class TakeByHand : MonoBehaviour
     public GameObject collidingObject;
     public GameObject player;
 
-    private float playerMass;
+    private float playerMov;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerMass = player.GetComponent<Rigidbody>().mass;
+        
     }
 
     // Update is called once per frame
@@ -36,6 +36,8 @@ public class TakeByHand : MonoBehaviour
                 collidingObject.GetComponent<Rigidbody>().useGravity = false;
                 collidingObject.transform.SetPositionAndRotation(this.transform.position, Quaternion.identity);
                 collidingObject.transform.parent = this.transform;
+                
+                
             }
             if (Input.GetKeyUp(KeyCode.K))
             {
@@ -52,7 +54,7 @@ public class TakeByHand : MonoBehaviour
         
 
         if (carrying) {
-        playerMass += 0.1f;
+            player.GetComponent<Movement>().movSpeed -= 30;
         }
     }
 
