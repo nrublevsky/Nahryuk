@@ -50,17 +50,29 @@ public class BoxBehavior : MonoBehaviour
         
     }
 
+    public IEnumerator DestroyInBox()
+    {
+        yield return new WaitForSeconds(1);
+        
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Daikon"))
+        if (collision.collider.CompareTag("Veg"))
         {
-            Debug.Log("Added daikon");
-            AddCorrect();
+            //check for veg name
+            //if (correct veg name) {
+            //add 1
+            //}
+            StartCoroutine(DestroyInBox());
+            Destroy(collision.gameObject);
         }
-        if (collision.collider.CompareTag("Raddish"))
+        if (collision.collider.CompareTag("NonVeg"))
         {
-            Debug.Log("Not Daikon");
-            collision.rigidbody.AddForce(new Vector3(0, Random.Range(60f, 120f), 0) * pushForce, ForceMode.Impulse);
+            //penalty
+            
+            StartCoroutine(DestroyInBox());
+            Destroy(collision.gameObject);
         }
     }
 }

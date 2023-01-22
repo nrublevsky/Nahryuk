@@ -542,18 +542,18 @@ MonoBehaviour:
   - {fileID: 3928642541961935006, guid: 8877f4aac7d3c184ea4954647487e084, type: 3}
   - {fileID: 4458322441206303422, guid: 2143820a10229dc4d8a5213c914fc271, type: 3}
   spawnPositions:
-  - {x: -3, y: 3.05, z: -0.55}
-  - {x: -1, y: 3.05, z: -0.55}
-  - {x: 1, y: 3.05, z: -0.55}
-  - {x: 2.5, y: 3.05, z: -0.55}
+  - {x: -3, y: 3.05, z: -0.05}
+  - {x: -1, y: 3.05, z: -0.05}
+  - {x: 1, y: 3.05, z: -0.05}
+  - {x: 2.5, y: 3.05, z: -0.05}
   randomPosition: {fileID: 0}
   delay: 1
   spawnRate: 0.5
   vegetableSpawned: 0
-  blockerL: {fileID: 0}
-  blockerR: {fileID: 0}
+  blockerL: {fileID: 2926155}
+  blockerR: {fileID: 493362917}
   blocking: 0
-  reqBoxes: 0
+  reqBoxes: 5
   actualBoxes: 0
 --- !u!4 &1082431792 stripped
 Transform:
@@ -573,7 +573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 906963855815476182, guid: e025474b8b09efa4496bc44f9c3a8993, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.164
+      value: -0.88893
       objectReference: {fileID: 0}
     - target: {fileID: 906963855815476182, guid: e025474b8b09efa4496bc44f9c3a8993, type: 3}
       propertyPath: m_LocalPosition.y
@@ -614,6 +614,10 @@ PrefabInstance:
     - target: {fileID: 2397817634486273348, guid: e025474b8b09efa4496bc44f9c3a8993, type: 3}
       propertyPath: m_Name
       value: BoxTrue 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5762568558146670524, guid: e025474b8b09efa4496bc44f9c3a8993, type: 3}
+      propertyPath: m_Convex
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e025474b8b09efa4496bc44f9c3a8993, type: 3}
@@ -1160,7 +1164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 985437392657358852, guid: bd8140143e5d7dd458b16412ca312add, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.79
+      value: 0.793
       objectReference: {fileID: 0}
     - target: {fileID: 985437392657358852, guid: bd8140143e5d7dd458b16412ca312add, type: 3}
       propertyPath: m_LocalPosition.y

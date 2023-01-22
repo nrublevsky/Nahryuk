@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7799993263886542398}
   - component: {fileID: 2580184834173455061}
-  - component: {fileID: 30908704314669205}
   - component: {fileID: 2708208381805747342}
+  - component: {fileID: 384734019335826258}
   m_Layer: 0
   m_Name: Rock_04
   m_TagString: Untagged
@@ -51,20 +51,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
---- !u!114 &30908704314669205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4458322441206303422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bc56eab1f7b2f24cad503eb90669c25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gm: {fileID: 0}
-  vegName: "\u0414\u0430\u0439\u043A\u043E\u043D\u0447\u0456\u043A"
 --- !u!64 &2708208381805747342
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -79,6 +65,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 682bef71ca092ef49bfed7f1cef5b893, type: 3}
+--- !u!114 &384734019335826258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4458322441206303422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92055f59548b83b4ea99a98ba0412b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 0}
+  vegName: 
 --- !u!1001 &459048575258247174
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7439459068793030629}
   m_Layer: 0
   m_Name: Tomato_03
-  m_TagString: Untagged
+  m_TagString: Veg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

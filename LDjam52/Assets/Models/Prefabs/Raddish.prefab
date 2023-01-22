@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3747819131765288121}
   m_Layer: 0
   m_Name: Raddish
-  m_TagString: Raddish
+  m_TagString: Veg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

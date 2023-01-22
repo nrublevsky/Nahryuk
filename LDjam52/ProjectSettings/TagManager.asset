@@ -16,8 +16,8 @@ TagManager:
   - SideBoxCollider
   - BoxTaker
   - BoxProcessor
-  - Raddish
-  - Daikon
+  - Veg
+  - NonVeg
   layers:
   - Default
   - TransparentFX

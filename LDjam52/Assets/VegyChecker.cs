@@ -7,6 +7,9 @@ public class VegyChecker : MonoBehaviour
 
     public GameObject box;
     public BoxBehavior boxBehavior;
+
+    public int boxGoal;
+    public int boxCurr;
     // Start is called before the first frame update
     void Start()
     {

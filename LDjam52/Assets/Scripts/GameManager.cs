@@ -35,29 +35,27 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         spawnRate = Random.Range(2, 3);
-        
-        
+
+        InvokeRepeating("SpawnVegetables",delay,spawnRate);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
-    public void Spawn5Vegetables()
+    public void SpawnVegetables()
     {
-        if (vegetableSpawned > 5)
-        {
-            StartCoroutine(Spawn(spwnblVeges,spwnblKakas, spawnPositions));
-        }
         
+            Debug.Log("spawned " + vegetableSpawned + "so far");
+            
+            StartCoroutine(Spawn(spwnblVeges,spwnblKakas, spawnPositions));
+               
     }
 
     public IEnumerator Spawn(List<GameObject> veges,List<GameObject> kakas, List<Vector3> spawnPositions)
     {
-        
-        
         if (gameRunning)
         {
             spawnRate = Random.Range(2, 4);
@@ -67,12 +65,12 @@ public class GameManager : MonoBehaviour
 
             if (random > 3)
             {
-                Instantiate(spwnblVeges[Random.Range(0, veges.Count)], spawnPositions[Random.Range(0, spawnPositions.Count)], randRot);
+                Instantiate(spwnblVeges[Random.Range(0, veges.Count)], spawnPositions[/*Random.Range(0, spawnPositions.Count)*/1], randRot);
                 vegetableSpawned++;
             }
             else
             {
-                Instantiate(spwnblKakas[Random.Range(0, kakas.Count)], spawnPositions[Random.Range(0, spawnPositions.Count)], randRot);
+                Instantiate(spwnblKakas[Random.Range(0, kakas.Count)], spawnPositions[/*Random.Range(0, spawnPositions.Count)*/ 1], randRot);
             }
         }
         yield return new WaitForSeconds(spawnRate);

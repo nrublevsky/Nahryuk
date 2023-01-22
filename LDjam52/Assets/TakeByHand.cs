@@ -54,7 +54,11 @@ public class TakeByHand : MonoBehaviour
         
 
         if (carrying) {
-            player.GetComponent<Movement>().movSpeed -= 30;
+            player.GetComponent<Movement>().movSpeed = 70;
+        }
+        else
+        {
+            player.GetComponent<Movement>().movSpeed = 100;
         }
     }
 

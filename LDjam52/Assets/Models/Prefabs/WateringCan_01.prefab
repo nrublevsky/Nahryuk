@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3928642541959931486}
   - component: {fileID: 6874692661040567030}
   - component: {fileID: 8176664872117775144}
+  - component: {fileID: 4636672117746525076}
   m_Layer: 0
   m_Name: WateringCan_01
   m_TagString: Untagged
@@ -115,3 +116,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
+--- !u!114 &4636672117746525076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3928642541961935006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92055f59548b83b4ea99a98ba0412b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 0}
+  vegName: 
